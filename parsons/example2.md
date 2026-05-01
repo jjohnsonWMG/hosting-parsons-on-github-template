@@ -43,5 +43,5 @@ title: Insertion sort
 })(); 
 </script>
 
-[Home](../Home.html)
+[Home](../Home.html)  
 [Bubble sort](./example1.html)
