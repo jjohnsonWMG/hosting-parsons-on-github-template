@@ -38,8 +38,7 @@ Re-arrange the blocks below so they form the bubble sort algorithm
     "can_indent": true,
     "x_indent": 50,
     "lang": "en",
-    "show_feedback": true,
-    "python3": true
+    "show_feedback": true
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
@@ -119,14 +118,12 @@ Your task is to construct a function which returns the index of the largest elem
 </p>
 <script type="text/javascript">
 (function(){
-  var initial = "def maxindex(arg):\n" +
-    " ans = 0\n" +
-    " for i in range(len(arg)):\n" +
-    " if arg[i] > arg[ans]:\n" +
-    " ans = i\n" +
-    " while True:\n" +
-    "pass\n" +
-    " return ans";
+  var initial = "for i in range(0, len(arr) - 1):\n" +
+    "    for j in range(0, len(arr) - 1):\n" +
+    "        if arr[j] &gt; arr[j + 1]:\n" +
+    "            tmp = arr[j + 1]\n" +
+    "            arr[j + 1] = arr[j]\n" +
+    "            arr[j] = tmp";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "p3-sortable",
     "max_wrong_lines": 10,
