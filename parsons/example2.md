@@ -1,41 +1,47 @@
 ---
 layout: default
-title: Example 2
+title: Insertion sort
 ---
-<div id="sortableTrash" class="sortable-code"></div>
-<div id="sortable" class="sortable-code"></div>
-<div style="clear:both;"></div>
 
-<p>
-    <input id="feedbackLink" value="Get Feedback" type="button" />
-    <input id="newInstanceLink" value="Reset Problem" type="button" />
-</p>
-
-<script type="text/javascript">
-var initial = "1\n" +
-    "2\n" +
-    "3\n" +
-    "4\n" +
-    "5";
-var parsonsPuzzle2 = new ParsonsWidget({
+<div id="sortableTrash" class="sortable-code"></div> 
+<div id="sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "for i in range(1, len(arr)):\n" +
+    "    j = i\n" +
+    "    while j &gt; 0 and arr[j] &lt; arr[j - 1]:\n" +
+    "        tmp = arr[j - 1]\n" +
+    "        arr[j - 1] = arr[j]\n" +
+    "        arr[j] = tmp\n" +
+    "        j -= 1";
+  var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
     "x_indent": 50,
-    "lang": "en"
-});
-parsonsPuzzle2.init(initial);
-parsonsPuzzle2.shuffleLines();
-$("#newInstanceLink").click(function(event){
-    event.preventDefault();
-    parsonsPuzzle2.shuffleLines();
-});
-$("#feedbackLink").click(function(event){
-    event.preventDefault();
-    parsonsPuzzle2.getFeedback();
-});
+    "lang": "en",
+    "show_feedback": true,
+    "python3": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
 </script>
 
-[Previous](./example1.html)
+[Home](../Home.html)
+[Bubble sort](./example1.html)

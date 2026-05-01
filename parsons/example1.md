@@ -43,3 +43,4 @@ title: Bubble sort
 </script>
 
 [Home](../index.html)
+[Insertion sort](./example2.html)

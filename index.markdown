@@ -9,3 +9,4 @@ title: Multiple Parson's Problems on One Page
 
 ### Sorting algorithms
 [Bubble sort](./parsons/example1.html)
+[Insertion sort](./parsons/example2.html)
