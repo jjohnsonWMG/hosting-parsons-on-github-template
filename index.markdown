@@ -19,16 +19,11 @@ Re-arrange the blocks below so they form the bubble sort algorithm
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "for i in range(0, len(arr) - 1):
-\n" +
-    "    for j in range(0, len(arr) - 1):
-\n" +
-    "        if arr[j] &gt; arr[j + 1]:
-\n" +
-    "            tmp = arr[j + 1]
-\n" +
-    "            arr[j + 1] = arr[j]
-\n" +
+  var initial = "for i in range(0, len(arr) - 1):\n" +
+    "    for j in range(0, len(arr) - 1):\n" +
+    "        if arr[j] &gt; arr[j + 1]:\n" +
+    "            tmp = arr[j + 1]\n" +
+    "            arr[j + 1] = arr[j]\n" +
     "            arr[j] = tmp";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "bs-sortable",
