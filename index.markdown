@@ -7,5 +7,5 @@ title: Multiple Parson's Problems on One Page
 ---
 # Parsons Practice
 
-### Bubble sort
-[Next](./parsons/example1.html)
+### Sorting algorithms
+[Bubble sort](./parsons/example1.html)
