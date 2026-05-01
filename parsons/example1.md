@@ -32,7 +32,7 @@ title: Bubble sort
     "x_indent": 50,
     "lang": "en",
     "show_feedback": true,
-    "python3": true
+    "trashId": "p1-sortableTrash"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
