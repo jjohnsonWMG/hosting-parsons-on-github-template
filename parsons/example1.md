@@ -47,4 +47,4 @@ title: Bubble sort
 })(); 
 </script>
 
-[Home](./index.html)
+[Home](../index.html)
