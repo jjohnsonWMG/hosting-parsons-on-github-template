@@ -1,0 +1,60 @@
+---
+layout: default
+title: Merge (from merge sort)
+---
+
+<div id="merge-sortableTrash" class="sortable-code"></div> 
+<div id="merge-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="merge-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="merge-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "def merge(left, right):\n" +
+    "    i = j = 0\n" +
+    "    merged = []\n" +
+    "    while i &lt; len(left) and j &lt; len(right) :\n" +
+    "        if left[i] &lt; right[j]:\n" +
+    "            merged.append(left[i])\n" +
+    "            i += 1\n" +
+    "        else:\n" +
+    "            merged.append(right[j])\n" +
+    "            j += 1\n" +
+    "\n" +
+    "    while i &lt; len(left):\n" +
+    "        merged.append(left[i])\n" +
+    "        i += 1\n" +
+    "\n" +
+    "    while j &lt; len(right):\n" +
+    "        merged.append(right[j])\n" +
+    "        j += 1\n" +
+    "\n" +
+    "    return merged";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "merge-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true,
+    "python3": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#merge-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#merge-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+[Home](../index.html)
+[Partition (quick sort)](./partition.html)
